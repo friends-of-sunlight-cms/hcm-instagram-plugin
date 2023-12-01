@@ -1,0 +1,33 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "HCM Instagram",
+    "description": "Adds HCM for loading images from Instagram.",
+    "authors": [
+        {"name": "Lukáš Tesař", "url": "https://tlukas.eu"}
+    ],
+    "version": "1.0.0",
+    "environment": {
+        "system": "^8.0"
+    },
+    "actions": {
+        "config": "ConfigAction"
+    },
+    "config_defaults": {
+        "token": "",
+        "limit": 4,
+        "width": 200,
+        "height": 200
+    },
+    "langs": {
+        "hcm-instagram": "lang"
+    },
+    "hcm": {
+        "instagram": {"script": "hcm/instagram.php"}
+    },
+    "cron": {
+        "instagram": {
+            "interval": 86400,
+            "script": "cron/instagram.php"
+        }
+    }
+}
