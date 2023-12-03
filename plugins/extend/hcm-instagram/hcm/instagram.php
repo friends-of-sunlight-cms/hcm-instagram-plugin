@@ -11,7 +11,7 @@ return function () {
     $output .= "<script>\n";
     $output .= "var userFeed = new Instafeed({\n";
     $output .= "accessToken: '" . $this->getConfig()['token'] . "',\n";
-    $output .= "limit: " . $limit = $this->getConfig()['limit'] . ",\n";
+    $output .= "limit: " . $this->getConfig()['limit'] . ",\n";
     $output .= "template: '<a href=\"{{link}}\" target=\"_blank\" ><img src=\"{{image}}\" width=\"" . $this->getConfig()['width'] . "\" height=\"" . $this->getConfig()['height'] . "\" alt=\"{{caption}}\" title=\"{{caption}}\"></a> '\n";
     $output .= "});\n";
     $output .= "userFeed.run();\n";
